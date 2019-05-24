@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Hitung Rab</title>
+	<script src="asset/js/project.js"></script>
+	<link rel="icon" href="asset/image/file.png">
+	<link rel="stylesheet" href="asset/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="asset/css/gradient.css">
+	<link rel="stylesheet" type="text/css" href="asset/css/style.css">
+	
+
+
+</head>
+<body>
+	
+	<nav class="navbar navbar-expand-md bg-light shadow border-0 position-relative">
+	  <a class="navbar-brand" href="#"><img src="asset/image/logo marikang.png" width="50" height="50" alt=""></a>
+	  <div onclick="tabfungsi('halamanUtama')" id="default" ></div>
+		<span class="text-danger text-hiden">Menu</span>
+	  <div class="ml-auto mr-2 position-relative">
+	    <div class="menu-drop" onclick="myfung()">
+	    	<div class="drop1"></div>
+	    	<div class="drop2"></div>
+	    	<div class="drop3"></div>
+	    </div>
+	    <div id="myDropdown" class="dropdown-content bg-light">
+		    <a href="#home">
+					Sign <img src="asset/image/unlock.png" width="20" height="20" alt="">
+				</a>
+		    <a href="#about">Komentar</a>
+		    <a href="#contact">Kontak</a>
+	  	</div>
+	  </div>
+	</nav>
+	<!-- Button trigger modal -->
+	<div class="container mt-2">
+		<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalLong">
+		  Pilih Jenis pekerjaan <img src="asset/image/jenispekerjaan.png" width="25" height="25" alt="">
+		</button>
+	</div>
+	<!-- Modal -->
+	<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+	  <div class="modal-dialog modal-dialog-scrollable" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="exampleModalLongTitle">Uraian Pekerjaan</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body">
+						<button type="button" class="btn btn-outline-danger mt-1 col-md-5" data-dismiss="modal" onclick="tabfungsi('galian')">
+								Galian Tanah 
+						</button>
+						<button type="button" class="btn btn-outline-danger mt-1 col-md-5" data-dismiss="modal" onclick="tabfungsi('pondasi')">
+	        			Pasang Pondasi 
+						</button>
+						<button type="button" class="btn btn-outline-danger mt-1 col-md-5" data-dismiss="modal" onclick="tabfungsi('sloff')">
+								Pasang Sloof 
+						</button>
+						<button type="button" class="btn btn-outline-danger mt-1 col-md-5" data-dismiss="modal" onclick="tabfungsi('kolom')">
+								Pasang Kolom 
+						</button>
+						<button type="button" class="btn btn-outline-danger mt-1 col-md-5" data-dismiss="modal" onclick="tabfungsi('balok')">
+								Pasang Ring Balok 
+						</button>
+	        	<button type="button" class="btn btn-outline-danger mt-1 col-md-5" data-dismiss="modal" onclick="tabfungsi('keramik')">
+	        			Pasang Keramik 
+	    			</button>
+	        	<button type="button" class="btn btn-outline-danger mt-1 col-md-5" data-dismiss="modal" onclick="tabfungsi('bata')">
+	        			Pasang 1/2 bata 
+	    			</button>
+	        	<button type="button" class="btn btn-outline-danger mt-1 col-md-5" data-dismiss="modal" onclick="tabfungsi('cat')">
+	        			Pekerjaan Cat 
+	    			</button>
+	        	<button type="button" class="btn btn-outline-danger mt-1 col-md-5" data-dismiss="modal" onclick="tabfungsi('acian')">
+	        			Mengaci 
+	    			</button>
+	       		<button type="button" class="btn btn-outline-danger mt-1 col-md-5" data-dismiss="modal" onclick="tabfungsi('plester')">
+	        			Plester 
+	    			</button>
+	        <!-- <button type="button" class="btn btn-danger" data-dismiss="modal">Button</button>
+	        <button type="button" class="btn btn-danger" data-dismiss="modal">Button</button>
+	        <button type="button" class="btn btn-danger" data-dismiss="modal">Button</button>
+	        <button type="button" class="btn btn-danger" data-dismiss="modal">Button</button> -->
+		  </div>
+	      <div class="modal-footer">
+	        <span class="badge badge-danger">Contact Wa : 082132498419</span>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<!-- class bootstrap untuk tampilan mobile col dan col-md
+			<div class="col-4 col-md-2 res-card"> -->
+
+
+	<!-- coding fungsi hitung dengan input plus output -->
+	<div class="container mt-2">
+		<!-- tampilan awal -->
+		<div class="jumbotron bg-light shadow border border-dark tab-jenis" id="halamanUtama">
+				<div class="row">
+					<div class="col-md-9 position-relative m-auto">
+						<img src="asset/image/rab.jpg" class=" w-100" height="350" alt="">
+						<div class="text-rab">
+						<span class="badge badge-warning p-2">Aplikasi RAB</span>
+						<p>Hitung Anggaran Biaya Dalam Satuan Pekerjaan</p>
+					</div>
+					</div>
+				</div>
+		</div>
+			<!-- Input dan Output Rab -->
+			<div class="jumbotron bg-light shadow border border-dark tab-jenis" id="galian">
+					<h2>Galian Tanah sedalam 1m</h2>
+					<div class="row">
+						<div class="col-md-3">
+							<div class="card">
+								<img src="img Rab/13.jpg" class="card-img-top" alt="...">
+								<div class="card-body">
+									<!-- inputan Volume -->
+									<input type="number" class="form-control" placeholder="Masukan Panjang" id="Pgalian">
+									<input type="number" class="form-control" placeholder="Masukan Lebar" id="Lgalian">
+									<input type="number" class="form-control" placeholder="Masukan Tinggi" id="Tgalian">
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="table-responsive-md">
+						<table class="table table-striped">
+							<caption>
+									Total Biaya <label id="totbiayagalian">Rp</label>
+								</caption>
+			  <thead class="thead-inverse">
+				    <tr>
+				      <th scope="col">Pekerja</th>
+				      <th scope="col">Biaya</th>
+				    </tr>
+				  </thead>
+							<tbody>
+								<tr>
+									<td>Pekerja</td>
+									<td><label id="lblPGalian"></label></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+						</div>
+					</div>
+					<hr class="my-4">
+					<button type="button" class="btn btn-danger text-white" onclick="hitung('Pgalian','Lgalian','Tgalian','gal')">Hitung</button>
+				</div>
+						<!-- Input dan Output Rab -->
+		<div class="jumbotron bg-light shadow border border-dark tab-jenis" id="pondasi">
+			<h2>Pemasangan Pondasi Batu Belah 1pc : 5pp</h2>
+			<div class="row">
+				<div class="col-md-3">
+					<div class="card">
+					  <img src="img Rab/12.png" class="card-img-top" alt="...">
+					  <div class="card-body">
+							<!-- inputan Volume -->
+							<span class="text">Lebar Atas</span><input type="number" class="form-control" placeholder="Masukan Lebar Atas" id="LpondasiA">
+							<span class="text">Lebar Bawah</span><input type="number" class="form-control" placeholder="Masukan Lebar Bawah" id="LpondasiB">
+							<span class="text">Tinggi</span><input type="number" class="form-control" placeholder="Masukan Tinggi" id="Tpondasi">
+					    <span class="text">Panjang</span><input type="number" class="form-control" placeholder="Masukan Panjang" id="Ppondasi">
+							
+					  </div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="table-responsive-md">
+				<table class="table table-striped">
+					<caption>
+				  		Total Biaya <label id="totbiayapondasi">Rp</label>
+				  	</caption>
+				  <thead class="thead-inverse">
+				    <tr>
+				      <th scope="col">Bahan Material</th>
+				      <th scope="col">Total Bahan</th>
+				      <th scope="col">Biaya</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				    <tr>
+				      <td>Batu Pecah</td>
+				      <td><label id="lblBPecahPonB"></label></td>
+				      <td><label id="lblBPecahPonBb"></label></td>
+				    </tr>
+				    <tr>
+				      <td>Semen PC</td>
+				      <td><label id="lblsemenPonB"></label></td>
+				      <td><label id="lblsemenPonBb"></label></td>
+				    </tr>
+				    <tr>
+				      <td>Pasir Pasang</td>
+				      <td><label id="lblPasirPPonB"></label></td>
+				      <td><label id="lblPasirPPonBb"></label></td>
+				    </tr>
+				    <tr>
+				       <td>Pekerja Terampil</td>
+				       <td><label id=""></label></td>
+				       <td><label id="lblPterampilPonB"></label></td>
+						</tr>
+						<tr>
+								<td>Tukang Batu</td>
+								<td><label id=""></label></td>
+								<td><label id="lblTbatuPonB"></label></td>
+						 </tr>
+				  </tbody>
+				</table>
+			</div>
+				</div>
+			</div>
+		  <hr class="my-4">
+		  <button type="button" class="btn btn-danger text-white" onclick="hitungpon('LpondasiA','LpondasiB','Tpondasi','Ppondasi')">Hitung</button>
+		</div>
+				<!-- Input dan Output Rab -->
+				<div class="jumbotron bg-light shadow border border-dark tab-jenis" id="sloff">
+					<h2>Pemasangan Sloof</h2>
+					<div class="row">
+						<div class="col-md-3">
+							<div class="card">
+								<img src="img Rab/4.png" class="card-img-top" alt="...">
+								<div class="card-body">
+									<!-- inputan Volume -->
+									<span class="text">Panjang</span><input type="number" class="form-control" placeholder="Masukan Panjang" id="Psloff">
+									<span class="text">Lebar</span><input type="number" class="form-control" placeholder="Masukan Lebar" id="Lsloff">
+									<span class="text">Tinggi</span><input type="number" class="form-control" placeholder="Masukan Tinggi" id="Tsloff">
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="table-responsive-md">
+						<table class="table table-striped">
+							<caption>
+									Total Biaya <label id="lbltotalsloof">Rp</label>
+								</caption>
+							<thead class="thead-inverse">
+								<tr>
+									<th scope="col">Bahan Material</th>
+									<th scope="col">Total Bahan</th>
+									<th scope="col">Biaya</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Kayu Kelas III</td>
+									<td><label id="lblKayusloof"></label></td>				
+									<td><label id="lblKayuslooff"></label></td>
+								</tr>
+								<tr>
+									<td>Paku 2"-5"</td>
+									<td><label id="lblPakusloof"></label></td>
+									<td><label id="lblPakuslooff"></label></td>
+								</tr>
+								<tr>
+									<td>Minyak Bekisting</td>
+									<td><label id="lblminyakbeksloof"></label></td>
+									<td><label id="lblminyakbekslooff"></label></td>
+								</tr>
+								<tr>
+									 <td>Besi Beton Polos</td>
+									 <td><label id="lblbesibpsloof"></label></td>
+									 <td><label id="lblbesibpslooff"></label></td>
+								</tr>
+								<tr>
+										<td>Kawat Ikat Beton</td>
+										<td><label id="lblkawatsloof"></label></td>
+										<td><label id="lblkawatslooff"></label></td>
+								</tr>
+								<tr>
+										<td>Semen Portland (PC)</td>
+										<td><label id="lblsemensloof"></label></td>
+										<td><label id="lblsemenslooff"></label></td>
+								</tr>
+								<tr>
+										<td>Pasir Beton</td>
+										<td><label id="lblpasirsloof"></label></td>
+										<td><label id="lblpasirslooff"></label></td>
+								</tr>
+								<tr>
+								<td>Batu Pecah  2 - 3  (Mesin) :</td>
+								<td><label id="lblbpsloof"></label></td>
+								<td><label id="lblbpslooff"></label></td>
+								</tr>
+								<tr>
+								<td>Pekerja Terampil :</td>
+								<td><label id=""></label></td>
+								<td><label id="lblPsloof"></label></td>
+								</tr>
+								<tr>
+								<td>Tukang Batu :</td>
+								<td><label id=""></label></td>
+								<td><label id="lblTbsloof"></label></td>
+								</tr>				
+							</tbody>
+						</table>
+					</div>
+						</div>
+					</div>
+					<hr class="my-4">
+					<button type="button" class="btn btn-danger text-white" onclick="hitung('Psloff','Lsloff','Tsloff','ringsloff')">Hitung</button>
+				</div>
+		<!-- Input dan Output Rab -->
+		<div class="jumbotron bg-light shadow border border-dark tab-jenis" id="kolom">
+			<h2>Pemasangan Kolom</h2>
+			<div class="row">
+				<div class="col-md-3">
+					<div class="card">
+					  <img src="img Rab/6.png" class="card-img-top" alt="...">
+					  <div class="card-body">
+					  	<!-- inputan Volume -->
+							<span class="text">Panjang</span><input type="number" class="form-control" placeholder="Masukan Panjang" id="Pkolom">
+							<span class="text">Lebar</span><input type="number" class="form-control" placeholder="Masukan Lebar" id="Lkolom">
+							<span class="text">Tinggi</span><input type="number" class="form-control" placeholder="Masukan Tinggi" id="Tkolom">
+					  </div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="table-responsive-md">
+				<table class="table table-striped">
+					<caption>
+				  		Total Biaya <label id="lbltotalkolom">Rp</label>
+				  	</caption>
+				  <thead class="thead-inverse">
+				    <tr>
+				      <th scope="col">Bahan Material</th>
+				      <th scope="col">Total Bahan</th>
+				      <th scope="col">Biaya</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+							<tr>
+									<td>Kayu Kelas III</td>
+									<td><label id="lblKayukolom"></label></td>
+									<td><label id="lblKayukolomm"></label></td>
+								</tr>
+								<tr>
+									<td>Paku 2"-5"</td>
+									<td><label id="lblPakukolom"></label></td>
+									<td><label id="lblPakukolomm"></label></td>
+								</tr>
+								<tr>
+									<td>Minyak Bekisting</td>
+									<td><label id="lblminyakbekkolom"></label></td>
+									<td><label id="lblminyakbekkolomm"></label></td>
+								</tr>
+								<tr>
+									 <td>Besi Beton Polos</td>
+									 <td><label id="lblbesibpkolom"></label></td>
+									 <td><label id="lblbesibpkolomm"></label></td>
+								</tr>
+								<tr>
+										<td>Kawat Ikat Beton</td>
+										<td><label id="lblkawatkolom"></label></td>
+										<td><label id="lblkawatkolomm"></label></td>
+								</tr>
+								<tr>
+										<td>Semen Portland (PC)</td>
+										<td><label id="lblsemenkolom"></label></td>
+										<td><label id="lblsemenkolomm"></label></td>
+								</tr>
+								<tr>
+										<td>Pasir Beton</td>
+										<td><label id="lblpasirkolom"></label></td>
+										<td><label id="lblpasirkolomm"></label></td>
+								</tr>
+								<tr>
+								<td>Batu Pecah  2 - 3  (Mesin) :</td>
+								<td><label id="lblbpkolom"></label></td>
+								<td><label id="lblbpkolomm"></label></td>
+								</tr>
+								<tr>
+								<td>Kayu Kelas II :</td>
+								<td><label id="lblKayuduakolom"></label></td>
+								<td><label id="lblKayuduakolomm"></label></td>
+								</tr>
+								<tr>
+								<td>Plywood/Kayu Lapis Tebal 6 mm (0,40 x 0,80) :</td>
+								<td><label id="lblplykolom"></label></td>
+								<td><label id="lblplykolomm"></label></td>
+								</tr>
+								<tr>
+								<td>Kayu Dolken/Gelam Ø 8 - 10/400 cm :</td>
+								<td><label id="lbldolkenkolom"></label></td>
+								<td><label id="lbldolkenkolomm"></label></td>
+								</tr>
+								<tr>
+								<td>Pekerja Terampil :</td>
+								<td><label id=""></label></td>
+								<td><label id="lblPkolom"></label></td>
+								</tr>
+								<tr>
+								<td>Tukang Batu :</td>
+								<td><label id=""></label></td>
+								<td><label id="lblTbkolom"></label></td>
+								</tr>				
+				  </tbody>
+				</table>
+			</div>
+				</div>
+			</div>
+		  <hr class="my-4">
+		  <button type="button" class="btn btn-danger text-white" onclick="hitung('Pkolom','Lkolom','Tkolom','ringkolom')">Hitung</button>
+		</div>
+				<!-- Input dan Output Rab -->
+				<div class="jumbotron bg-light shadow border border-dark tab-jenis" id="balok">
+						<h2>Pemasangan Ring Balok</h2>
+						<div class="row">
+							<div class="col-md-3">
+								<div class="card">
+									<img src="img Rab/11.png" class="card-img-top" alt="...">
+									<div class="card-body">
+										<!-- inputan Volume -->
+										<span class="text">Panjang</span><input type="number" class="form-control" placeholder="Masukan Panjang" id="Pbalok">
+										<span class="text">Lebar</span><input type="number" class="form-control" placeholder="Masukan Lebar" id="Lbalok">
+										<span class="text">Tinggi</span><input type="number" class="form-control" placeholder="Masukan Tinggi" id="Tbalok">
+									</div>
+								</div>
+							</div>
+							<div class="col">
+								<div class="table-responsive-md">
+							<table class="table table-striped">
+								<caption>
+										Total Biaya <label id="lbltotalbalok">Rp</label>
+									</caption>
+								<thead class="thead-inverse">
+									<tr>
+										<th scope="col">Bahan Material</th>
+										<th scope="col">Total Bahan</th>
+										<th scope="col">Biaya</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Kayu Kelas III</td>
+										<td><label id="lblKayubalok"></label></td>				
+										<td><label id="lblKayubalokk"></label></td>
+									</tr>
+									<tr>
+										<td>Paku 2"-5"</td>
+										<td><label id="lblPakubalok"></label></td>
+										<td><label id="lblPakubalokk"></label></td>
+									</tr>
+									<tr>
+										<td>Minyak Bekisting</td>
+										<td><label id="lblminyakbekbalok"></label></td>
+										<td><label id="lblminyakbekbalokk"></label></td>
+									</tr>
+									<tr>
+										 <td>Besi Beton Polos</td>
+										 <td><label id="lblbesibpbalok"></label></td>
+										 <td><label id="lblbesibpbalokk"></label></td>
+									</tr>
+									<tr>
+											<td>Kawat Ikat Beton</td>
+											<td><label id="lblkawatbalok"></label></td>
+											<td><label id="lblkawatbalokk"></label></td>
+									</tr>
+									<tr>
+											<td>Semen Portland (PC)</td>
+											<td><label id="lblsemenbalok"></label></td>
+											<td><label id="lblsemenbalokk"></label></td>
+									</tr>
+									<tr>
+											<td>Pasir Beton</td>
+											<td><label id="lblpasirbalok"></label></td>
+											<td><label id="lblpasirbalokk"></label></td>
+									</tr>
+									<tr>
+									<td>Batu Pecah  2 - 3  (Mesin) :</td>
+									<td><label id="lblbpbalok"></label></td>
+									<td><label id="lblbpbalokk"></label></td>
+									</tr>
+									<tr>
+									<td>Pekerja Terampil :</td>
+									<td><label id=""></label></td>
+									<td><label id="lblPbalok"></label></td>
+									</tr>
+									<tr>
+									<td>Tukang Batu :</td>
+									<td><label id=""></label></td>
+									<td><label id="lblTbbalok"></label></td>
+									</tr>				
+								</tbody>
+							</table>
+						</div>
+							</div>
+						</div>
+						<hr class="my-4">
+						<button type="button" class="btn btn-danger text-white" onclick="hitung('Pbalok','Lbalok','Tbalok','ringbalok')">Hitung</button>
+					</div>
+			<!-- Input dan Output Rab -->
+
+			<!-- kermaik baru -->
+		<div class="jumbotron bg-light shadow border border-dark tab-jenis" id="keramik">
+			<!-- belum -->
+			<h2>Pemasangan Keramik</h2>
+			<div class="row">
+					<div class="col-md-3">
+						<div class="card">
+							<img src="img Rab/7.png" class="card-img-top" alt="...">
+							<div class="card-body">
+								<!-- inputan Volume -->
+								<input type="number" class="form-control" id="pkera" placeholder="Masukan Panjang">
+								<input type="number" class="form-control" id="lkera" placeholder="Masukan Lebar">
+							</div>
+						</div>
+					</div>
+					<div class="col">
+							<div class="row">
+									<select class="custom-select" id="spekkera">
+											<option selected>Pilih Spesifikasi Campuran</option>
+											<option value="kera1">Keramik Marble brown 30x30</option>
+											<option value="kera2">Keramik Supermilan 40x40</option>
+										</select>
+							</div>
+						<div class="table-responsive-md">
+					<table class="table table-striped">
+						<caption>
+								Total Biaya <label id="totkera">Rp</label>
+							</caption>
+						<thead class="thead-inverse">
+							<tr>
+								<th scope="col">Bahan Material</th>
+								<th scope="col">Total Bahan</th>
+								<th scope="col">Biaya</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Keramik</td>
+								<td><label id="jmlkera"></label></td>
+								<td><label id="hgkera"></label></td>
+							</tr>
+							<tr>
+								<td>Semen Gresik</td>
+								<td><label id="jmlsemkera"></label></td>
+								<td><label id="hgsemkera"></label></td>
+							</tr>
+							<tr>
+								<td>Pasir Pasang</td>
+								<td><label id="jmlpaskera"></label></td>
+								<td><label id="hgpaskera"></label></td>
+							</tr>
+							<tr>
+								 <td>Semen Putih</td>
+								 <td><label id="jmlputkera"></label></td>
+								 <td><label id="hgputkera"></label></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+					</div>
+				</div>
+				<hr class="my-4">
+				<button type="button" class="btn btn-danger text-white" onclick="hitungm('pkera','lkera','spekkera','paskera')">Hitung</button>	
+		</div>
+		<!-- Input dan Output Rab -->
+
+		<!-- bata baru -->
+		<div class="jumbotron bg-light shadow border border-dark tab-jenis" id="bata">
+			<h2>Pemasangan 1/2 Bata</h2>
+			<div class="row">
+					<div class="col-md-3">
+						<div class="card">
+							<img src="img Rab/3.png" class="card-img-top" alt="...">
+							<div class="card-body">
+								<!-- inputan Volume -->
+								<input type="number" class="form-control" id="pbata" placeholder="Masukan Panjang">
+								<input type="number" class="form-control" id="lbata" placeholder="Masukan Lebar">
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="row">
+								<select class="custom-select" id="spekbata">
+										<option selected>Pilih Spesifikasi Campuran</option>
+										<option value="bata1">1pc : 4pp</option>
+										<option value="bata2">1pc : 6pp</option>
+									</select>
+						</div>
+						<div class="table-responsive-md">
+					<table class="table table-striped">
+						<caption>
+								Total Biaya <label id="totbata">Rp</label>
+							</caption>
+						<thead class="thead-inverse">
+							<tr>
+								<th scope="col">Bahan Material</th>
+								<th scope="col">Total Bahan</th>
+								<th scope="col">Biaya</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Bata Merah</td>
+								<td><label id="jmlbata"></label></td>
+								<td><label id="hgbata"></label></td>
+							</tr>
+							<tr>
+								<td>Semen Gresik</td>
+								<td><label id="jmlsembata"></label></td>
+								<td><label id="hgsembata"></label></td>
+							</tr>
+							<tr>
+								<td>Pasir Pasang</td>
+								<td><label id="jmlpasbata"></label></td>
+								<td><label id="hgpasbata"></label></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+					</div>
+				</div>
+				<hr class="my-4">
+				<button type="button" class="btn btn-danger text-white" onclick="hitungm('pbata','lbata','spekbata','pasbata')">Hitung</button>	
+		</div>
+		<!-- Input dan Output Rab -->
+		<div class="jumbotron bg-light shadow border border-dark tab-jenis" id="cat">
+			<h2>Pekerjaan Cat</h2>
+			<div class="row">
+				<div class="col-md-3">
+					<div class="card">
+					  <img src="img Rab/cattembok.jpg" class="card-img-top" alt="...">
+					  <div class="card-body">
+					  	<!-- inputan Volume -->
+					    <input type="number" class="form-control" placeholder="Masukan Panjang" id="Pcat">
+					    <input type="number" class="form-control" placeholder="Masukan Lebar" id="Lcat">
+					  </div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="row">
+								<select class="custom-select" id="spekcat">
+										<option selected>Pilih Spesifikasi Campuran</option>
+										<option value="cat1">Avitex 5kg</option>
+										<option value="cat2">Duluc 5kg </option>
+									</select>
+						</div>
+					<div class="table-responsive-md">
+				<table class="table table-striped">
+					<caption>
+				  		Total Biaya <label id="totbiayacat">Rp</label>
+				  	</caption>
+				  <thead class="thead-inverse">
+				    <tr>
+				      <th scope="col">Bahan Material</th>
+				      <th scope="col">Total Bahan</th>
+				      <th scope="col">Biaya</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				    <tr>
+				      <td>Plamir Tembok</td>
+				      <td><label id="lblplamir"></label></td>
+				      <td><label id="lblplamirr"></label></td>
+				    </tr>
+				    <tr>
+				      <td>Cat Dasar</td>
+				      <td><label id="lblcatdsr"></label></td>
+				      <td><label id="lblcatdsrr"></label></td>
+				    </tr>
+				    <tr>
+				      <td>Cat Penutup</td>
+				      <td><label id="lblcatptp"></label></td>
+				      <td><label id="lblcatptpp"></label></td>
+				    </tr>
+				    <tr>
+				       <td>Tukang Cat</td>
+				       <td><label id=""></label></td>
+				       <td><label id="lbltkcat"></label></td>
+				    </tr>
+				  </tbody>
+				</table>
+			</div>
+				</div>
+			</div>
+		  <hr class="my-4">
+		  <button type="button" class="btn btn-danger text-white" onclick="hitungm('Pcat','Lcat','spekcat','pengecatan')">Hitung</button>
+		</div>
+		<!-- Input dan Output Rab -->
+
+		<!-- acian baru -->
+		<div class="jumbotron bg-light shadow border border-dark tab-jenis" id="acian">
+			<h2>Pekerjaan Acian</h2>
+			<div class="row">
+					<div class="col-md-3">
+						<div class="card">
+							<img src="img Rab/2.png" class="card-img-top" alt="...">
+							<div class="card-body">
+								<!-- inputan Volume -->
+								<input type="number" class="form-control" id="paci" placeholder="Masukan Panjang">
+								<input type="number" class="form-control" id="laci" placeholder="Masukan Lebar">
+							</div>
+						</div>
+					</div>
+					<div class="col">
+							<!-- <div class="row">
+									<select class="custom-select" id="speksemen">
+											<option selected>Pilih Spesifikasi Campuran</option>
+											<option value="sem1">Semen Gresik</option>
+											<option value="sem2">Semen Holcim</option>
+										</select>
+							</div> -->
+						<div class="table-responsive-md">
+					<table class="table table-striped">
+						<caption>
+								Total Biaya <label id="totaci">Rp</label>
+							</caption>
+						<thead class="thead-inverse">
+							<tr>
+								<th scope="col">Bahan Material</th>
+								<th scope="col">Total Bahan</th>
+								<th scope="col">Biaya</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Semen Gresik</td>
+								<td><label id="jmlsemaci"></label></td>
+								<td><label id="hgsemaci"></label></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+					</div>
+				</div>
+				<hr class="my-4">
+				<button type="button" class="btn btn-danger text-white" onclick="hitungaci('paci','laci')">Hitung</button>
+		</div>
+		<!-- Input dan Output Rab -->
+		<div class="jumbotron bg-light shadow border border-dark tab-jenis" id="plester">
+			<h2>Pekerjaan Plesteran</h2>
+			<div class="row">
+					<div class="col-md-3">
+						<div class="card">
+							<img src="img Rab/1.png" class="card-img-top" alt="...">
+							<div class="card-body">
+								<!-- inputan Volume -->
+								<input type="number" class="form-control" id="pples" placeholder="Masukan Panjang">
+								<input type="number" class="form-control" id="lples" placeholder="Masukan Lebar">
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="row">
+							<select class="custom-select" id="spekples">
+									<option selected>Pilih Spesifikasi Campuran</option>
+									<option value="ples1">1pc : 4pp tebal 15mm</option>
+									<option value="ples2">1pc : 6pp tebal 15mm</option>
+								</select>
+							</div>
+						<div class="table-responsive-md">
+					<table class="table table-striped">
+						<caption>
+								Total Biaya <label id="totples">Rp</label>
+							</caption>
+						<thead class="thead-inverse">
+							<tr>
+								<th scope="col">Bahan Material</th>
+								<th scope="col">Total Bahan</th>
+								<th scope="col">Biaya</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Semen Gresik</td>
+								<td><label id="jmlsemples"></label></td>
+								<td><label id="hgsemples"></label></td>
+							</tr>
+							<tr>
+								<td>Pasir Pasang</td>
+								<td><label id="jmlpasples"></label></td>
+								<td><label id="hgpasples"></label></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+					</div>
+				</div>
+				<hr class="my-4">
+				<button type="button" class="btn btn-danger text-white" onclick="hitungm('pples','lples','spekples','pasplesteran')">Hitung</button>
+		</div>
+
+	
+	</div>
+
+	
+	<div class="card text-white bg-light mt-5">
+	  <div class="card-header bg-strain">
+	    <div class="container mt-3">
+	    	<div class="row">
+		    	<div class="col">
+		    		<div class="col-xl-9">
+								<h4>Tentang Kami</h4>
+								<hr>
+								<p>Tujuan Kami Ingin Membantu Masyarakat Dalam Menghitung RAB(Rencana Anggaran Biaya)
+									Dalam Pembangunan Rumah Atau Renovasi, Dengan Ini KAmi Membantu Dengan Menyediakan 
+									Aplikasi Menghitung Kebutuhan Bahan dan Total Biaya Dalam Satuan Pekerjaan.
+									dan Kami Membuat Aplikasi Ini Masih Tahap Pengembangan.
+								</p>								
+						</div>
+		    	</div>
+		    	<div class="col">
+		    		<div class="media">
+							<a class="d-flex align-self-bottom" href="#">
+									<img src="asset/image/repair.png" width="100" height="100" alt="">
+							</a>
+							<div class="media-body">
+								<h5>Renovasi Rumah</h5>
+								<p>Menyediakan Jasa Tukang Borongan dan Harian</p>
+							</div>
+						</div>
+						<div class="media mt-3">
+								<a class="d-flex align-self-bottom" href="#">
+										<img src="asset/image/arsitek.png" width="100" height="100" alt="">
+								</a>
+								<div class="media-body">
+									<h5>Desain Rumah</h5>
+									<p>Desain Arsitek Rumah 2d dan 3d</p>
+								</div>
+							</div>
+		    	</div>
+	    	</div>
+	    </div>
+	  </div>
+	  <div class="card-body">
+			<div class="row">
+				<div class="col-md-6">
+						<form class="p-2 brd-form">
+								<h5 class="card-title text-dark">Kirim Saran Dan Komentar</h5>
+							<div class="form-group">
+								<label for="inputEmail3" class="col-sm-2 col-form-label">Nama</label>
+									<input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+							</div>
+							<div class="form-group">
+									<label for="exampleFormControlTextarea1">Example textarea</label>
+									<textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Isi Komentar Anda" rows="3"></textarea>
+							</div>
+						 
+							<div class="form-group">
+									<button type="submit" class="btn btn-danger">Kirim komentar</button>
+							</div>
+						</form>
+				</div>
+				<div class="col-md-6">
+					<h5 class="text-dark">Info Kami <img src="asset/icon/icons8-info-48.png" width="25" height="25" alt=""></h5>
+					<div class="row position-relative">
+						<img src="asset/image/office.png" width="50" height="50" alt="">
+						<i class="text-dark position-absolute" style="bottom:0; left:55px;">Office  : Stikom Banyuwangi</i>
+					</div>
+					<div class="row pt-2">
+							<img src="asset/image/wa.png" width="50" height="50" alt="">
+						<ul>
+							<li>
+								<i class="text-dark">Putri : <b>085338072132</b></i>
+							</li>
+							<li>
+									<i class="text-dark">Intan : <b>082231274448</b></i>
+							</li>
+						</ul>
+									
+									
+						</div>
+				</div>
+			</div> 
+	  </div>
+	  <div class="card-footer bg-strain text-muted" style="text-align:center;">
+	    Marikang_hitungRAB@copyright_2019
+	  </div>
+	</div>
+
+	<!-- <figure class="figure">
+		<img src="asset/image/rumah.png" class="figure-img img-fluid rounded" alt="">
+		<figcaption class="figure-caption">
+			Hitung Rab
+		</figcaption>
+	</figure> -->
+
+
+	<script src="asset/js/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
+	<script src="asset/js/popper.min.js" crossorigin="anonymous"></script>
+	<script src="asset/js/bootstrap.min.js" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="asset/js/fungsi.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+.menu-drop{
+	display: block;
+	padding: 0px 15px;
+	cursor: pointer;
+	text-align: center;
+}
+.drop1,.drop2,.drop3{
+	width: 25px;
+	height: 3px;
+	background-color: rgb(204, 0, 0);
+	margin:3px;
+}
+.drop2{
+	width: 15px;
+}
+.text-hiden{
+	position: absolute;
+	right: 85px;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  
+  min-width: 160px;
+  left: -120px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #080000;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+.tab-jenis{
+	-webkit-animation:faddein 1s;
+	animation: faddein 1s;
+}
+
+/*Animation*/
+@-webkit-keyframes faddein{
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
+}
+@keyframes faddein{
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
+}
+/* For Firefox */
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+/* Webkit browsers like Safari and Chrome */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.brd-form{
+	border-right:1px solid gray;
+}
+.text-rab{
+	position: absolute;
+	bottom: 0;
+	background: rgba(0,0,0,0.77);
+	padding: 5px 10px;
+	color: white;
+	border-radius: 12px;
+}
+/*responsive*/
+
+@media (max-width: 450px) {
+	.res-text{
+		text-align: center;
+		font-size: 15px;
+	}	
+	.res-card{
+		padding: 2px;
+		text-align: center;
+	}
+	.img-res{
+		width: 50px;
+		height: 40px;
+		margin: auto;
+	}
+	.brd-form{
+		border:none;
+	}
+	.text-hiden{
+		display: none;
+	}
+}
