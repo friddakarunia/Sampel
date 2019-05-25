@@ -6,28 +6,28 @@ class bangunan {
     public t:number;
     //deklarasi harga bahan
     hargaBata:number=700;
-    hargaBatuPecah:number=225000;
+    hargaBatuPecah:number=290000;
     hargasemengresik:number=60000;
-    hargapasir:number=200000;
-    hargapasirUrug:number=150000;
+    hargapasir:number=210000;
+    hargapasirUrug:number=230000;
     hargaKeramik:number;//isi 6 dlm 1 kardus
     hargasemenPutih:number=65000;
     //belum ada harga
     hargakayu3:number=99000;
     hargapaku:number=3700;
-    hargaminyakbek:number=10;
-    hargabesibeton:number=10;
-    hargakawatikatB:number=10; 
-    hargapasirbtn:number=10; 
-    hargabpecahmesin:number=1000;
-    hargaplywood:number=100;
-    hargadolken:number=100;
-    hargaplamir:number=6500;
+    hargaminyakbek:number=14000;
+    hargabesibeton:number=11500;
+    hargakawatikatB:number=15500; 
+    hargapasirbtn:number=335500; 
+    hargabpecahmesin:number=300000;
+    hargaplywood:number=240000;
+    hargadolken:number=11000;
+    hargaplamir:number=10000;
     hargacatdasar:number=18000;
     hargacatpenutup:number;
     //deklarasi variabel Jasa
-    hargaPekerja:number=65000;
-    hargaPekerjaTerampil:number=73750 ;
+    hargaPekerja:number=75000;
+    hargaPekerjaTerampil:number=80000 ;
     hargaTukangBatu:number=80750;
     hargaTukangcat:number=60000;
     volume(panjang, lebar, tinggi) {
